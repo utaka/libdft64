@@ -1,6 +1,8 @@
 FROM ubuntu:20.04
 
-RUN apt-get update \
+ENV TZ=Asia/Tokyo
+RUN ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime \
+    && apt-get update \
     && apt-get -y upgrade \
     && apt-get -y install \
         build-essential \
