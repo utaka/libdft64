@@ -2,7 +2,15 @@ FROM ubuntu:20.04
 
 RUN apt-get update \
     && apt-get -y upgrade \
-    && apt-get -y install build-essential gcc-multilib g++-multilib wget build-essential \
+    && apt-get -y install \
+        build-essential \
+        gcc-multilib \
+        g++-multilib \
+        wget \
+        build-essential \
+        curl \
+        vim-gtk3 \
+        python3 \
     && apt-get clean
 
 
