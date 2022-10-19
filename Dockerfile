@@ -9,8 +9,10 @@ RUN apt-get update \
 ENV PIN_TAR_NAME=pin-3.20-98437-gf02b61307-gcc-linux
 ENV PIN_ROOT=/${PIN_TAR_NAME}
 
-RUN wget http://software.intel.com/sites/landingpage/pintool/downloads/${PIN_TAR_NAME}.tar.gz \
-    && tar xvf ${PIN_TAR_NAME}.tar.gz
+# RUN wget http://software.intel.com/sites/landingpage/pintool/downloads/${PIN_TAR_NAME}.tar.gz \
+#     && tar xvf ${PIN_TAR_NAME}.tar.gz
+COPY ${PIN_TAR_NAME}.tar.gz .
+RUN tar xvf ${PIN_TAR_NAME}.tar.gz
 
 RUN mkdir -p libdft
 COPY . libdft
