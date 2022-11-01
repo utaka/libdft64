@@ -13,6 +13,7 @@ RUN ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime \
         curl \
         vim-gtk3 \
         python3 \
+        netcat \
     && apt-get clean
 
 
