@@ -30,6 +30,7 @@ COPY . libdft
 WORKDIR libdft
 RUN make
 COPY ./env.init /opt/
+COPY ./server.py /opt/
 
 VOLUME ["/data"]
 WORKDIR /data
